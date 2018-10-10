@@ -1,10 +1,11 @@
 from django.conf.urls import url, include
 from rest_framework import routers
-from .views import UserViewSet
+from api.views import UserViewSet, QuestionViewSet
 
 
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
+router.register(r'questions', QuestionViewSet)
 
 
 # Wire up our API using automatic URL routing.
